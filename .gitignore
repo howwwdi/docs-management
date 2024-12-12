@@ -1,0 +1,11 @@
+**/*.txt
+*.js
+*.json
+!ABI.json
+**/*.exe
+**/.env
+go.mod
+go.sum
+node_modules
+/artifacts/build-info
+/cache
