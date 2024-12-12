@@ -137,36 +137,3 @@ func DeleteFile(client *ethclient.Client, contractAddress common.Address, hexPri
 		log.Println("Successfully deleted file from Pinata")
 	}
 }
-
-// func main() {
-// 	godotenv.Load()
-
-// 	rpcUrl := os.Getenv("RPC_URL")
-// 	contractAddress := os.Getenv("CONTRACT_ADDRESS")
-// 	hexPK := os.Getenv("PRIVATE_KEY")
-// 	client, err := ethclient.Dial(rpcUrl)
-// 	if err != nil {
-// 		log.Fatalf("Failed to connect to Ethereum client: %v", err)
-// 	}
-
-// 	contractABI, err := contract_interactions.LoadABI("ABI.json")
-// 	if err != nil {
-// 		log.Fatalf("Failed to load ABI: %v", err)
-// 	}
-
-// 	// uploadFile(client, common.HexToAddress(contractAddress), hexPK, contractABI)
-
-// 	docId := uint64(15)
-
-// 	ipfshash, _, err := getDocument(client, common.HexToAddress(contractAddress), contractABI, docId)
-// 	if err != nil {
-// 		log.Fatalf("Failed to get document: %v", err)
-// 	}
-
-// 	// err = pinata_api.DownloadFromPinata(ipfshash, "downloaded_document.txt")
-// 	// if err != nil {
-// 	// 	log.Fatalf("Failed to download file: %v", err)
-// 	// }
-
-// 	deleteFile(client, common.HexToAddress(contractAddress), hexPK, contractABI, docId, ipfshash)
-// }
